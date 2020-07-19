@@ -8,6 +8,32 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <!-- Navigation -->
+    <!-- <header>
+      <div class="overlay has-fade"></div>
+
+      <nav class="container">
+        <a href="#" class="logo">
+          
+          <img src="images/logo.svg" alt="GoldVille" />
+        </a>
+
+        <a id="hamBtn" href="#" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Faqs</a>
+          <a href="#">Login</a>
+        </div>
+
+        <a href="#" class="button">Signup</a>
+      </nav> -->
     <nav class="navbar navbar-expand-sm navbar-light bg-white">
       <div class="container">
         <a class="navbar-brand gv-text-logo text-uppercase" href="#">
@@ -43,13 +69,11 @@
               <a class="nav-link" href="#">Contacts</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="./login.html">Login</a>
+              <a class="nav-link" href="#">Login</a>
             </li>
 
             <li class="nav-item active ml-5">
-              <a class="nav-link button text-white" href="./signup-choose.html"
-                >Sign up</a
-              >
+              <a class="nav-link button text-white" href="#">Sign up</a>
             </li>
           </ul>
         </div>
@@ -57,46 +81,74 @@
     </nav>
     <div class="container-fluid wrapper">
       <h1 class="text-uppercase text-center mt-5 signup-header">
-        sign in to goldville
+        sign up to goldville
       </h1>
     </div>
     <div class="form-wrapper">
-      <form action="" class="login-form card-common p-4">
+      <form action="" class="login-form card-common p-3">
         <div class="container">
-          <h5 class="text-dark my-4">Sign in</h5>
+          <h5 class="text-dark my-4">Sign up as a buyer</h5>
           <div class="form-group">
-            <label for="email" class="text-dark">Email Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstname"
+              placeholder="First Name"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="lastname"
+              placeholder="Last Name"
+            />
+          </div>
+          <div class="form-group">
             <input
               type="email"
               class="form-control"
               id="email"
-              placeholder="example@email.com"
+              placeholder="Email Address"
             />
           </div>
           <div class="form-group">
-            <label for="password" class="text-dark">Password</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              id="username"
+            />
+          </div>
+
+          <div class="form-group">
             <input
               type="password"
               class="form-control"
               id="password"
-              placeholder="**********"
+              placeholder="Password"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Confirm Password"
             />
           </div>
           <div class="clearfix">
             <label class="float-left checkbox-inline text-dark"
-              ><input type="checkbox" /> Remember me</label
-            >
-            <a href="#" class="float-right text-dark"
-              >Forgot Password?
-              <!-- <span class="text-gold">reset it</span> -->
-            </a>
+              ><input type="checkbox" />&nbsp;By registering, you agree to our
+              terms and conditions.
+            </label>
           </div>
           <button class="btn btn-block submit-btn rounded-0 text-uppercase">
-            Sign In
+            Sign Up
           </button>
-          <p class="text-center text-dark small mt-4 mb-1">
-            Don't have an account?
-            <a href="#" class="text-decoration-none text-gold">Create One</a>
+          <p class="text-center text-dark small mt-1">
+            Have an account?
+            <a href="#" class="text-decoration-none text-gold">Login</a>
           </p>
           <p class="text-center text-dark small">
             <a href="#" class="text-decoration-none text-gold text-uppercase"

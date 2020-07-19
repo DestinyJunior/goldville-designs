@@ -5,269 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
-      :root {
-        --dark-blue: hsl(233, 26%, 24%);
-        --lime-green: hsl(136, 65%, 51%);
-        --bright-cyan: hsl(192, 70%, 51%);
-        --grayish-blue: hsl(233, 8%, 62%);
-        --light-grayish-blue: hsl(220, 16%, 96%);
-        --very-light-gray: hsl(0, 0%, 98%);
-        --gradient: linear-gradient(
-          to right,
-          hsl(136, 65%, 51%),
-          hsl(192, 70%, 51%)
-        );
-        --white: hsl(0, 0%, 100%);
-        --font-md: 1.125rem;
-        --font-sm: 0.875rem;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      html {
-        font-size: 16px;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5 {
-        color: #cb9c54 !important;
-      }
-
-      body {
-        font-family: "Public Sans", sans-serif;
-        font-weight: 300;
-        font-size: var(--font-md);
-        line-height: 1.5;
-        color: white;
-        overflow-x: hidden;
-        background-color: #ffffff;
-      }
-
-      nav {
-        background: var(--white);
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 1.0625rem;
-        padding-bottom: 1.0625rem;
-      }
-
-      header {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-
-      header .logo {
-        /* margin-left: 200px; */
-      }
-
-      header .logo img {
-        width: 141px;
-        height: 22px;
-      }
-
-      header .hamburger > * {
-        display: block;
-        width: 26px;
-        height: 2px;
-        background-color: var(--dark-blue);
-        transition: all 300ms ease-in-out;
-        transform-origin: 3px 1px;
-      }
-
-      .wrapper {
-      }
-
-      header .hamburger {
-        display: none;
-      }
-      header .hamburger span:not(:last-child) {
-        margin-bottom: 5px;
-      }
-
-      header .links {
-      }
-
-      header .links a {
-        color: var(--grayish-blue);
-        transition: color 0.3s ease-in-out;
-        position: relative;
-      }
-
-      header .links a:not(:last-child) {
-        margin-right: 32px;
-      }
-
-      header .links a:hover {
-        color: var(--dark-blue);
-      }
-
-      header .links a::before {
-        content: "";
-        position: absolute;
-        display: block;
-        height: 5px;
-        background: var(--gradient);
-        left: 0;
-        right: 0;
-        bottom: -30px;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-      }
-
-      header .links a:hover::before {
-        opacity: 1;
-      }
-
-      .button {
-        background-color: #cb9c54;
-        padding: 10px;
-        text-decoration: none;
-        color: #fff;
-        height: 45px;
-        width: 117px;
-        text-align: center;
-      }
-
-      .text-gold {
-        color: #cb9c54 !important;
-      }
-
-      .submit-btn {
-        background-color: #cb9c54;
-        color: #fff;
-      }
-
-      @media (min-width: 780px) {
-        header .logo {
-          margin-left: 150px;
-        }
-        .button {
-          margin-right: 50px;
-        }
-      }
-
-      .signup-header {
-        font-family: "Product Sans";
-        line-height: 16px;
-        font-size: 2.2em;
-        font-weight: bold;
-        font-style: normal;
-      }
-
-      .gv-text-logo {
-        color: #cb9c54 !important;
-        font-family: "Public Sans", sans-serif;
-        font-weight: bolder;
-        font-size: 1.5em;
-        letter-spacing: -4px;
-      }
-
-      /* .group-images {
-        width: 100%;
-        background-image: url("./Group76.png");
-        background-position: center;
-        background-size: cover;
-      } */
-
-      .form-wrapper {
-        display: -ms-flexbox;
-        display: -webkit-box;
-        display: flex;
-        -ms-flex-align: center;
-        -ms-flex-pack: center;
-        -webkit-box-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        justify-content: center;
-        padding-top: 40px;
-        padding-bottom: 40px;
-      }
-      /* 
-      .login-form {
-        width: 300px;
-        height: 500px;
-      } */
-
-      .login-form {
-        width: 385px;
-        margin: 30px auto;
-      }
-      .login-form form {
-        margin-bottom: 15px;
-        padding: 30px;
-      }
-
-      input,
-      input:focus {
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-        border-bottom: 0.5px solid #9c9c9c !important;
-        padding-left: 0px !important;
-      }
-
-      .form-control {
-        border-radius: 0 !important;
-      }
-      .text-decoration-none {
-        text-decoration: none !important;
-      }
-
-      .d-grid {
-        display: grid;
-        /* text-align: center; */
-        /* grid-template-columns: 1fr 1fr; */
-        gap: 4rem;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      }
-      .mt-20 {
-        margin-top: 7rem;
-      }
-      .px-6 {
-        padding-left: 7rem;
-        padding-right: 7rem;
-      }
-
-      /* 776 break point for navbar */
-    </style>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- Navigation -->
-    <!-- <header>
-      <div class="overlay has-fade"></div>
-
-      <nav class="container">
-        <a href="#" class="logo">
-          
-          <img src="images/logo.svg" alt="GoldVille" />
-        </a>
-
-        <a id="hamBtn" href="#" class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a>
-
-        <div class="links">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-          <a href="#">Faqs</a>
-          <a href="#">Login</a>
-        </div>
-
-        <a href="#" class="button">Signup</a>
-      </nav> -->
     <nav class="navbar navbar-expand-sm navbar-light bg-white">
       <div class="container">
         <a class="navbar-brand gv-text-logo text-uppercase" href="#">
@@ -303,7 +43,7 @@
               <a class="nav-link" href="#">Contacts</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Login</a>
+              <a class="nav-link" href="./login.html">Login</a>
             </li>
 
             <li class="nav-item active ml-5">
@@ -317,7 +57,7 @@
     </nav>
 
     <div class="container d-grid mt-20 px-6">
-      <div class="card pl-4 pt-5 shadow rounded">
+      <div class="card pl-4 pt-5 z-index card-common">
         <div class="row">
           <div class="col-md-6">
             <h1 class="text-dark">Buyer</h1>
@@ -325,27 +65,45 @@
               Create an account to buy your digital currency and make
               transactions.
             </p>
+            <button class="btn button">Get Started</button>
           </div>
           <div class="col-md-6">
-            <img src="./Group.png" alt="" />
+            <img src="./Group.png" height="300px" alt="Buyer" />
           </div>
         </div>
       </div>
-      <div class="card pl-4 pt-5 shadow rounded">
+      <div class="card pl-4 pt-5 z-index card-common">
         <div class="row">
           <div class="col-md-6">
             <h1 class="text-dark">Seller</h1>
             <p class="text-dark">
               Create an account to sell your digital currencies.
             </p>
+            <button class="btn button">Get Started</button>
           </div>
           <div class="col-md-6">
-            <img src="./Group12.png" alt="" />
+            <img src="./Group12.png" alt="Seller" />
           </div>
         </div>
       </div>
     </div>
 
     <!-- <div class="group-images"></div> -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

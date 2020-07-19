@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+:root {
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --gradient: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  --white: hsl(0, 0%, 100%);
+  --font-md: 16px;
+  --font-sm: 0.875rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #cb9c54 !important;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 300;
+  font-size: var(--font-md);
+  line-height: 1.5;
+  color: white;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+nav {
+  background: var(--white);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.0625rem;
+  padding-bottom: 1.0625rem;
+}
+
+.button {
+  background-color: #cb9c54;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  height: 45px;
+  width: 117px;
+  text-align: center;
+}
+
+.text-gold {
+  color: #cb9c54 !important;
+}
+
+.submit-btn {
+  background-color: #cb9c54;
+  color: #fff;
+}
+
+@media (min-width: 780px) {
+  header .logo {
+    margin-left: 150px;
+  }
+  .button {
+    margin-right: 50px;
+  }
+}
+
+.signup-header {
+  font-family: "Product Sans";
+  line-height: 16px;
+  font-size: 2.2em;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.gv-text-logo {
+  color: #cb9c54 !important;
+  font-family: "Public Sans", sans-serif;
+  font-weight: bolder;
+  font-size: 1.5em;
+  letter-spacing: -4px;
+}
+
+.form-wrapper {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 40px;
+}
+
+.login-form {
+  width: 355px;
+  margin: 10px auto;
+}
+
+.login-form form {
+  margin-bottom: 15px;
+  padding: 30px;
+}
+
+input,
+input:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-bottom: 0.5px solid #9c9c9c !important;
+  padding-left: 0px !important;
+}
+
+.form-control {
+  border-radius: 0 !important;
+}
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.d-grid {
+  display: grid;
+  /* text-align: center; */
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.mt-20 {
+  margin-top: 7rem;
+}
+.px-6 {
+  padding-left: 8rem;
+  padding-right: 7rem;
+}
+
+.z-index {
+  z-index: 1009;
+}
+
+/* Cards */
+.card-common {
+  box-shadow: 1px 2px 5px #999;
+  transition: 0.4s;
+  border-radius: 15px !important;
+}
+.card-common:hover {
+  box-shadow: 2px 3px 15px #999;
+  transform: translateY(-1px);
+}
+
+/* 776 break point for navbar */
