@@ -62,7 +62,8 @@ h5 {
 }
 
 .d-grid,
-.d-grid-2 {
+.d-grid-2,
+.d-grid-3 {
   display: grid;
 }
 
@@ -73,6 +74,33 @@ h5 {
 .d-grid-2 {
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.d-grid-3 {
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.btn-outline-li {
+  color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.btn-outline-li:hover {
+  color: #cb9c54;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.btn-outline-gold {
+  color: #cb9c54;
+  border-color: #cb9c54;
+}
+
+.btn-outline-gold:hover {
+  color: #fff;
+  background-color: #cb9c54;
+  border-color: #cb9c54;
 }
 
 /* Cards */
